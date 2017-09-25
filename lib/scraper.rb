@@ -2,7 +2,7 @@ class Scraper
   attr_accessor :file, :parsed_file, :all_pokemon, :db
 
   def initialize(db)
-    self.db = db
+    self.db = db # creates instance.db
     self.file = File.open("pokemon_index.html")
     self.parsed_file = Nokogiri::HTML.parse(file)
     self.all_pokemon = catch_em_all
